@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import BookSearchBox from "./components/BookSearchBox"
-import Search from "./pages/search/index"
-import Saved from "./pages/saved/index"
+// import BookSearchBox from "./components/BookSearchBox"
+import Search from "./pages/SearchBooks"
+import Saved from "./pages/SaveBooks"
 import NoMatch from "./pages/NoMatch"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 class App extends Component {
   render() {
     return (
-
       <Router>
        <Switch>
         <Route exact path="/" component={Search}></Route>
         <Route exact path="/search" component={Search}></Route>
         <Route exact path="/saved" component={Saved}></Route>
-          <Route component={NoMatch} />
+        <Route exact path="/saved/:id" component={Saved}></Route>
+        <Route component={NoMatch} />
         </Switch>
       </Router>
 

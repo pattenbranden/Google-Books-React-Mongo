@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import bookapi from "../../utils/googlebooks/api";
+import bookapi from "../../utils/API";
 
-class BookSearchBox extends Component{
-state = {
+class BookSearchBox extends Component {
+  state = {
     bookSearch: ""
   };
 
@@ -12,28 +12,26 @@ state = {
       [name]: value
     });
   };
-    
+
   handleFormSubmit = async event => {
     event.preventDefault();
-    let results = await bookapi.searchBooks(this.state.bookSearch);
+    let results = await bookapi.getReqGoogleSearchBooks(this.state.bookSearch);
     console.log(results)
   };
 
-render(){
-    return(
-    <div className="container">
+  render() {
+    return (
+      <div className="container">
         <h1>Book Search Box</h1>
         <form onSubmit={this.handleFormSubmit}>
-            <div className="form-group">
-                <input name="bookSearch" type="text" onChange={this.handleInputChange} className="form-control mt-5" placeholder="Search for Books" autoComplete="off"/>
-
-            </div>
-            <button type="submit" className="btn btn-danger">Search</button>
+          <div className="form-group">
+            <input name="bookSearch" type="text" onChange={this.handleInputChange} className="form-control mt-5" placeholder="Search for Books"/>
+          </div>
+          <button type="submit" className="btn btn-danger">Search</button>
         </form>
-    </div>
-    )}
+      </div>
+    )
+  }
 };
-
-
 
 export default BookSearchBox;
