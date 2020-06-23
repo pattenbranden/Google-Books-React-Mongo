@@ -22,8 +22,6 @@ Open [the live demonstration](https://google-books-react-bp.herokuapp.com/) in y
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
 * Clone the github repository to your local machine using 'git clone' command within the GitBash terminal.
 * Navigate to the directory you cloned the repository to via your command terminal using 'cd'.
 * Install the packages using 'npm install'.
