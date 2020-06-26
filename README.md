@@ -5,6 +5,8 @@ This was a difficult project to tackle, but perservierance and hard work paid of
 
 This application is designed to interact with the Google Books API. You can search for books you'd like to read and then add them to the list to view later. Then after you've read them you can delete them from the list!
 
+![Google Books React Mongo Image](https://raw.githubusercontent.com/pattenbranden/Google-Books-React-Mongo/master/GBRM.PNG)
+
 ## Getting Started
 
 Open [the live demonstration](https://google-books-react-bp.herokuapp.com/) in your browser.
